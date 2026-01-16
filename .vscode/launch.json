@@ -8,11 +8,16 @@
       "type": "node",
       "request": "launch",
       "env": {
-        "PORT": "3000"
+        "PORT": "8000",
+        "MONGO_URL": "mongodb://localhost:27017/auth-service",
+        "SESSION_SECRET": "FDogT1RINP$_5g6#",
+        "APPLICATION_BASE_URL": "http://localhost:3000",
+        "GMAIL_EMAIL_USER": "jalaludeenzubair029@gmail.com",
+        "GMAIL_EMAIL_APP_PASSWORD": "fvjp vqix knwg cjja"
       },
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\dist\\index.js",
+      "program": "${workspaceFolder}\\dist\\server.js",
       "outFiles": ["${workspaceFolder}/**/*.js"]
     }
   ]
