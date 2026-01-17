@@ -1,14 +1,12 @@
 import bcrypt from "bcryptjs";
-import { getModel } from "../helper/db.helper.js";
+import UserModel from "../models/user.model.js";
 
 export const localAuth = async (
   username: string,
   password: string,
-  done: (error: string | null, userId: Express.User | false) => void
+  done: (error: string | null, userId: Express.User | false) => void,
 ) => {
-  const model = getModel("userModel");
-  if (!model) throw new Error("Model not found");
-  const user = await model.findOne({ username });
+  const user = await UserModel.findOne({ username });
 
   if (!user) return done(null, false);
 

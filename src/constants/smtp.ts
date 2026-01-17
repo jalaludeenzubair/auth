@@ -5,5 +5,5 @@ export const SMTP_Provider = {
   },
 };
 export const EMAIL_TEMPLATE = {
-  resetPassword: "<h1>{$content}</h1>",
+  TESTING: "<h1>{$content}</h1>",
 };

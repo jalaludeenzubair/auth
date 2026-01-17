@@ -2,10 +2,10 @@ import { Response, Request, NextFunction } from "express";
 export const checkLoggedIn = (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (req.isAuthenticated()) {
-    return res.redirect("/dashboard");
+    return res.redirect("/home");
   }
   next();
 };
@@ -13,7 +13,7 @@ export const checkLoggedIn = (
 export const checkAuthenticated = (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (req.isAuthenticated()) {
     return next();
